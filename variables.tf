@@ -1,8 +1,10 @@
 variable "rgName"{ 
     type = string 
+    default = "src-terraform-rg"
     }
 variable "location" { 
     type = string 
+    default = "eastus"
     }
 variable "subscription_id" {
      type = string 
