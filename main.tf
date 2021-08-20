@@ -7,8 +7,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "DevRG" {
-  name     = "src-terraform-rg"
-  location = "eastus"
+  name     = var.RGName
+  location = var.location
 
   tags = {
     environment = "Dev"
