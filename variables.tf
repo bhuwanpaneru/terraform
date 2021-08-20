@@ -4,15 +4,15 @@ variable "rgName"{
 variable "location" { 
     type = string 
     }
-variable "subscriptionID" {
+variable "subscription_id" {
      type = string 
      }
-variable "clientID" { 
+variable "client_id" { 
     type = string 
     }
-variable "clientSecret" { 
+variable "client_secret" { 
     type = string 
     }
-variable "tenantID" { 
+variable "tenant_id" { 
     type = string 
     }
