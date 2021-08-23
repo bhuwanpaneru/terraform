@@ -20,7 +20,7 @@ data "external" "rg" {
     program = ["/bin/bash","./script.sh"]
 
     query = {
-        group_name = var.group_name
+        group_name = var.rgName
     }
 }
 
