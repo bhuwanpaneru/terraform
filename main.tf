@@ -16,7 +16,7 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "DevRG" {
-  count = azurerm_resource_group.DevRG.result.exists == "true" ? 0 : 1
+  count = azurerm_resource_group.DevRG.exists == "true" ? 0 : 1
   name     = var.rgName
   location = var.location
 
