@@ -1,6 +1,6 @@
 variable "rgName"{ 
     type = string 
-    default = "src-terraform-rg"
+    #default = "src-terraform-rg"
     }
 variable "location" { 
     type = string 
