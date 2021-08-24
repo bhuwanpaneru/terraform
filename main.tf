@@ -16,16 +16,8 @@ provider "azurerm" {
   tenant_id       = "${var.tenant_id}"
 }
 
-data "external" "rg" {
-    program = ["/bin/bash","./script.sh"]
-
-    query = {
-        group_name = var.rgName
-    }
-}
 
 resource "azurerm_resource_group" "DevRG" {
-  count = data.external.rg.result.exists == "true" ? 0 : 1
   name     = var.rgName
   location = var.location
 
