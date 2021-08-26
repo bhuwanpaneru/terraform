@@ -24,6 +24,4 @@ resource "azurerm_resource_group" "DevRG" {
   tags = {
     environment = "Dev"
   }
-  output "id" {
-  value = azurerm_resource_group.DevRG.id
 }
