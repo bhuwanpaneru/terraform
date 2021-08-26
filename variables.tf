@@ -4,7 +4,7 @@ variable "rgName"{
     }
 variable "location" { 
     type = string
-    default = "estus"
+    default = "eastus"
     }
 variable "subscription_id" {
      type = string 
