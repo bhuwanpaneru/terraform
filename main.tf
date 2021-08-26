@@ -18,8 +18,8 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "rg" {
-  name     = var.rgName
-  location = var.location
+  name     ="srs-eus-d-terra-rg"
+  location = "eastus"
 
   tags = {
     environment = "Dev"
