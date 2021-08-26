@@ -1,9 +1,11 @@
-#variable "rgName"{ 
-#    type = string 
-#    }
-#variable "location" { 
-#    type = string 
-#    }
+variable "rgName"{ 
+    type = string 
+    default = "srs-d-terra-test-rg"
+    }
+variable "location" { 
+    type = string
+    default = "estus"
+    }
 #variable "subscriptionID" {
 #     type = string 
 #     }
