@@ -6,15 +6,15 @@ variable "location" {
     type = string
     default = "estus"
     }
-#variable "subscriptionID" {
-#     type = string 
-#     }
-#variable "clientID" { 
-#    type = string 
-#    }
-#variable "clientSecret" { 
-#    type = string 
-#    }
-#variable "tenantID" { 
-#    type = string 
-#    }
+variable "subscriptionID" {
+     type = string 
+     }
+variable "clientID" { 
+    type = string 
+    }
+variable "clientSecret" { 
+    type = string 
+    }
+variable "tenantID" { 
+    type = string 
+    }
