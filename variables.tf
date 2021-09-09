@@ -1,6 +1,6 @@
 variable "rgName"{ 
     type = string 
-    default = "srs-eus-d-terra-test-rg"
+    #default = "srs-eus-d-terra-test-rg"
     }
 variable "location" { 
     type = string
