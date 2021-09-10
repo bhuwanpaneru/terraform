@@ -25,12 +25,12 @@ provider "azurerm" {
     client_id       = var.client_id
     client_secret   = var.client_secret
     tenant_id       = var.tenant_id
-    rgName          = var.rgName
+    #rgName          = var.rgName
 }
 
 # Hub RG
 resource "azurerm_resource_group" "rg" {
-  name     = rgName
+  name     = var.rgName
   location = var.location
   tags = {
     environment = "Dev"
