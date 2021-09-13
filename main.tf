@@ -12,6 +12,7 @@ terraform {
       version = "=2.46.0"
     }
   }
+  required_version = ">= 0.12, < 0.13"
 }
 
 #provider "azurerm" {
@@ -21,7 +22,6 @@ terraform {
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
-  version = "~> 1.34.0"
   subscription_id = var.subscription_id
   client_id       = var.client_id
   client_secret   = var.client_secret
