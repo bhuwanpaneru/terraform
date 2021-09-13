@@ -7,7 +7,7 @@
 
 # This will be specific to your own Terraform State in Azure storage
 
-resource "azurerm_resource_group" "legacy-resource-group" {}
+#resource "azurerm_resource_group" "legacy-resource-group" {}
 terraform {
   required_version = ">= 1.0.1"
   #backend "azurerm" {
