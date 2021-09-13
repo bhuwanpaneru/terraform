@@ -5,8 +5,16 @@
 #  required_version = ">= 0.12, < 0.13"
 #}
 
+# This will be specific to your own Terraform State in Azure storage
+
+resource "azurerm_resource_group" "legacy-resource-group" {}
 terraform {
   required_version = ">= 1.0.1"
+  #backend "azurerm" {
+   # resource_group_name   = "tstate"
+    #storage_account_name  = "tstateXXXXX"
+    #container_name        = "tstate"
+    #key                   = "terraform.tfstate"
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm" 
@@ -31,7 +39,7 @@ terraform {
 
 # Hub RG
 resource "azurerm_resource_group" "rg" {
-  name     = var.rgName
+  name     = "srs-d-eus-${var.rgName}"
   location = var.location
   tags = {
     environment = "Dev"
