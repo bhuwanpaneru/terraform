@@ -60,12 +60,12 @@ resource "azurerm_network_security_group" "basic-nsg" {
 
 #######################################################################
 # HUB Public IP SECTION
-resource "azurerm_public_ip" "hub-pip" {
-  name                = "hub-pip"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  allocation_method   = "Dynamic"
-}
+#resource "azurerm_public_ip" "hub-pip" {
+#  name                = "hub-pip"
+#  location            = azurerm_resource_group.rg.location
+#  resource_group_name = azurerm_resource_group.rg.name
+#  allocation_method   = "Dynamic"
+#}
 
 #resource "azurerm_storage_account" "st" {
 #  name                     = "irsdeunahu01st"
