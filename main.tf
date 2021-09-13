@@ -5,15 +5,15 @@
 #  required_version = ">= 0.12, < 0.13"
 #}
 
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~>1.34.0"
-    }
-  }
+#terraform {
+#  required_providers {
+#    azurerm = {
+#      source  = "hashicorp/azurerm" 
+#      version = "=2.75.0"
+#    }
+#  }
   #required_version = ">= 0.12, < 0.13"
-}
+#}
 
 #provider "azurerm" {
 # version = "~> 1.34.0"
@@ -21,6 +21,7 @@ terraform {
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
+  version = "=2.75.0"
   features {}
   subscription_id = var.subscription_id
   client_id       = var.client_id
