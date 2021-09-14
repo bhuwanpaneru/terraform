@@ -10,7 +10,6 @@
 # This will be specific to your own Terraform State in Azure storage
 data  "azurerm_resource_group" "rg" {
   name     = "srs-d-eus-${var.rgName}"
-  location = var.location
   }
 
 #resource "azurerm_resource_group" "legacy-resource-group" {}
