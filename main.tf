@@ -5,6 +5,8 @@
 #  required_version = ">= 0.12, < 0.13"
 #}
 
+
+
 # This will be specific to your own Terraform State in Azure storage
 data "azurerm_client_config" "current" {}
 
@@ -46,6 +48,7 @@ resource "azurerm_resource_group" "rg" {
     environment = "Dev"
   }
 }
+terraform import azurerm_resource_group.MyResourceGroup /subscriptions/${var.subscription_id}/resourceGroups/MyResourceGroup/${azurerm_resource_group.rg.name}
 
 # Setup a shared NSG used across all RGs
 resource "azurerm_network_security_group" "basic-nsg" {
