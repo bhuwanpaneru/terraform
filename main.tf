@@ -8,7 +8,15 @@
 
 
 # This will be specific to your own Terraform State in Azure storage
-data "azurerm_client_config" "current" {}
+data  "azurerm_resource_group" "rg" {
+  name     = "srs-d-eus-${var.rgName}"
+  location = var.location
+  tags = {
+    environment = "Dev"
+  }
+  lifecycle {
+    prevent_destroy = false
+  }
 
 #resource "azurerm_resource_group" "legacy-resource-group" {}
 terraform {
