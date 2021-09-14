@@ -48,7 +48,7 @@ resource "azurerm_resource_group" "rg" {
     environment = "Dev"
   }
 }
-terraform import azurerm_resource_group.MyResourceGroup /subscriptions/${var.subscription_id}/resourceGroups/MyResourceGroup/${azurerm_resource_group.rg.name}
+#terraform import azurerm_resource_group.MyResourceGroup /subscriptions/${var.subscription_id}/resourceGroups/MyResourceGroup/${azurerm_resource_group.rg.name}
 
 # Setup a shared NSG used across all RGs
 resource "azurerm_network_security_group" "basic-nsg" {
