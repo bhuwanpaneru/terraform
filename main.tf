@@ -11,9 +11,6 @@
 data  "azurerm_resource_group" "rg" {
   name     = "srs-d-eus-${var.rgName}"
   location = var.location
-  tags = {
-    environment = "Dev"
-  }
   }
 
 #resource "azurerm_resource_group" "legacy-resource-group" {}
