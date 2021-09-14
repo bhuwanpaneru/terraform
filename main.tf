@@ -47,6 +47,9 @@ resource "azurerm_resource_group" "rg" {
   tags = {
     environment = "Dev"
   }
+  lifecycle {
+    prevent_destroy = false
+  }
 }
 #terraform import azurerm_resource_group.MyResourceGroup /subscriptions/${var.subscription_id}/resourceGroups/MyResourceGroup/${azurerm_resource_group.rg.name}
 
