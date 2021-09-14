@@ -51,6 +51,10 @@ resource "azurerm_resource_group" "rg" {
     prevent_destroy = false
   }
 }
+
+output "id" {
+  value = data.azurerm_resource_group.rg.id
+}
 #terraform import azurerm_resource_group.MyResourceGroup /subscriptions/${var.subscription_id}/resourceGroups/MyResourceGroup/${azurerm_resource_group.rg.name}
 
 # Setup a shared NSG used across all RGs
