@@ -8,9 +8,7 @@
 
 
 # This will be specific to your own Terraform State in Azure storage
-data  "azurerm_resource_group" "rg" {
-  name     = "srs-d-eus-${var.rgName}"
-  }
+
 
 #resource "azurerm_resource_group" "legacy-resource-group" {}
 terraform {
@@ -41,6 +39,9 @@ terraform {
   tenant_id       = var.tenant_id
 }
 
+data  "azurerm_resource_group" "rg" {
+  name     = "srs-d-eus-${var.rgName}"
+  }
 
 # Hub RG
 resource "azurerm_resource_group" "rg" {
