@@ -14,8 +14,6 @@ data  "azurerm_resource_group" "rg" {
   tags = {
     environment = "Dev"
   }
-  lifecycle {
-    prevent_destroy = false
   }
 
 #resource "azurerm_resource_group" "legacy-resource-group" {}
