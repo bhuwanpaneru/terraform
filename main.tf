@@ -44,8 +44,8 @@ data  "azurerm_resource_group" "rg" {
   }
 
 #Check if Workspace still exists
-locals{
-  check =  lookup(data.azurerm_resource_group.rg.id)
+remote {
+  check =  lookup({value = resource.azurerm_resource_group.rg.id})
 }
 
 # Hub RG
@@ -63,7 +63,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 output "id" {
-  value = data.azurerm_resource_group.rg.id
+  value = resource.azurerm_resource_group.rg.id
 }
 #terraform import azurerm_resource_group.MyResourceGroup /subscriptions/${var.subscription_id}/resourceGroups/MyResourceGroup/${azurerm_resource_group.rg.name}
 
