@@ -18,9 +18,9 @@ terraform {
     #storage_account_name  = "tstateXXXXX"
     #container_name        = "tstate"
     #key                   = "terraform.tfstate"
+  
   #Check if Workspace still exists
-
-  check =  lookup({value = resource.azurerm_resource_group.rg.${var.rgName})
+  #check =  lookup({value = resource.azurerm_resource_group.rg.${var.rgName})
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm" 
