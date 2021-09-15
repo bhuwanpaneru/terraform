@@ -42,9 +42,9 @@ terraform {
   tenant_id       = var.tenant_id
 }
 
-data  "azurerm_resource_group" "rg" {
-  name     = "srs-d-eus-${var.rgName}"
-  }
+#data  "azurerm_resource_group" "rg" {
+#  name     = "srs-d-eus-${var.rgName}"
+#  }
 
 
 
@@ -61,9 +61,9 @@ resource "azurerm_resource_group" "rg" {
   }
 }
 
-output "id" {
-  value = resource.azurerm_resource_group.rg.id
-}
+#output "id" {
+#  value = resource.azurerm_resource_group.rg.id
+#}
 #terraform import azurerm_resource_group.MyResourceGroup /subscriptions/${var.subscription_id}/resourceGroups/MyResourceGroup/${azurerm_resource_group.rg.name}
 
 # Setup a shared NSG used across all RGs
