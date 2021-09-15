@@ -56,9 +56,9 @@ resource "azurerm_resource_group" "rg" {
   tags = {
     environment = "Dev"
   }
-  lifecycle {
-    prevent_destroy = false
-  }
+  #lifecycle {
+  #  prevent_destroy = false
+  #}
 }
 
 #output "id" {
