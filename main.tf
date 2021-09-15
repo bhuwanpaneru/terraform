@@ -43,10 +43,17 @@ data  "azurerm_resource_group" "rg" {
   name     = "srs-d-eus-${var.rgName}"
   }
 
+#Check if Workspace still exists
+locals{
+  check =  lookup(data.azurerm_resource_group.rg.id)
+}
+
 # Hub RG
 resource "azurerm_resource_group" "rg" {
+  count = local.check == "None" ? "1" : "0"
   name     = "srs-d-eus-${var.rgName}"
   location = var.location
+  operations = false
   tags = {
     environment = "Dev"
   }
