@@ -18,6 +18,10 @@ terraform {
     #storage_account_name  = "tstateXXXXX"
     #container_name        = "tstate"
     #key                   = "terraform.tfstate"
+  #Check if Workspace still exists
+remote {
+  check =  lookup({value = resource.azurerm_resource_group.rg.id})
+}
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm" 
@@ -43,10 +47,7 @@ data  "azurerm_resource_group" "rg" {
   name     = "srs-d-eus-${var.rgName}"
   }
 
-#Check if Workspace still exists
-remote {
-  check =  lookup({value = resource.azurerm_resource_group.rg.id})
-}
+
 
 # Hub RG
 resource "azurerm_resource_group" "rg" {
