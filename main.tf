@@ -50,7 +50,7 @@ data  "azurerm_resource_group" "rg" {
 
 # Hub RG
 resource "azurerm_resource_group" "rg" {
-  count = local.check == "None" ? "1" : "0"
+  #count = local.check == "None" ? "1" : "0"
   name     = "srs-d-eus-${var.rgName}"
   location = var.location
   operations = false
