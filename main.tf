@@ -42,10 +42,10 @@ terraform {
   tenant_id       = var.tenant_id
 }
 
-#data  "azurerm_resource_group" "rg" {
-#  name     = "srs-d-eus-${var.rgName}"
-#  }
-
+data "azurerm_resource_group" "rg" {
+  name = "srs-d-eus-${var.rgName}"
+  terraform import azurerm_resource_group.MyResourceGroup /subscriptions/${var.subscription_id}/resourceGroups/MyResourceGroup/${azurerm_resource_group.rg.name}
+}
 
 
 # Hub RG
